@@ -1,0 +1,39 @@
+{{- /*
+Collapsible parameter block (overrides the Hextra built-in).
+
+@param {string} title    Parameter name. Used as the heading and for the anchor.
+@param {string} type     Parameter type, e.g. String, [Object].
+@param {string} required Requirement label, e.g. required, optional.
+@param {string} parent   Name of the parent parameter. The anchor becomes "parent-title".
+@param {string} expanded Whether the block is open on page load (default: collapsed).
+
+@example {{< details title="email" type="String" required="required" parent="user" >}}...{{< /details >}}
+*/ -}}
+
+{{- $title := .Get "title" | default "" -}}
+{{- $type := .Get "type" | default "" -}}
+{{- $required := .Get "required" | default "" -}}
+{{- $parent := .Get "parent" | default "" -}}
+{{- $expanded := eq (.Get "expanded") "true" -}}
+{{- $anchor := cond (ne $parent "") (print $parent "-" $title) $title -}}
+{{- $inner := .InnerDeindent | $.Page.RenderString (dict "display" "block") -}}
+
+{{- /* Register the parameter for the search index (see assets/json/search-data.json).
+       Only the text before the first nested block is used as the description. */ -}}
+{{- with $anchor -}}
+  {{- $own := index (split (string $inner) "<details") 0 | plainify | htmlUnescape | strings.TrimSpace -}}
+  {{- $label := cond (ne $parent "") (print $parent "." $title) $title -}}
+  {{- $.Page.Store.SetInMap "paramIndex" . (dict "label" $label "text" $own) -}}
+{{- end -}}
+
+<details {{ with $anchor }}id="{{ . }}" {{ end }}class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" {{ if $expanded }}open{{ end }}>
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">{{ $title }}</span>
+    {{- with $type }}<span class="param-type">{{ . }}</span>{{ end -}}
+    {{- with $required }}<span class="param-required{{ if eq . "required" }} param-required--yes{{ end }}">{{ . }}</span>{{ end -}}
+    {{- with $anchor }}<a href="#{{ . }}" class="param-anchor" aria-label="Permalink to {{ $title }}">#</a>{{ end -}}
+  </summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    {{ $inner }}
+  </div>
+</details>

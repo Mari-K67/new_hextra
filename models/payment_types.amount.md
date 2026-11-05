@@ -1,0 +1,1 @@
+The booking amount in the currency specified by the `currency_code` field.

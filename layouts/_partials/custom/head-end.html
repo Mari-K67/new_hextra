@@ -1,0 +1,6 @@
+{{- /* Scripts for the details, expandable and methodline shortcodes. */ -}}
+{{- $js := slice (resources.Get "js/expand.js") (resources.Get "js/methodline.js") | resources.Concat "js/shortcodes.js" -}}
+{{- if hugo.IsProduction -}}
+  {{- $js = $js | minify | fingerprint -}}
+{{- end -}}
+<script defer src="{{ $js.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $js.Data.Integrity }}"{{ end }}></script>

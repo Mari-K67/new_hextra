@@ -1,0 +1,17 @@
+{{- /*
+API method + path line with a copy button (the button is added by js/methodline.js).
+
+@param {string} method HTTP method, e.g. POST.
+@param {string} path   Request path.
+@param {string} copy   Text to copy (default: path).
+
+@example {{< methodline method="post" path="/api/b2b/v3/hotel/order/booking/finish/" >}}
+*/ -}}
+
+{{- $method := upper (.Get "method") -}}
+{{- $path := .Get "path" -}}
+{{- $copy := or (.Get "copy") $path -}}
+<div class="api-line api-line-{{ lower $method }}" data-copy="{{ $copy }}">
+  <span class="api-line-badge">{{ $method }}</span>
+  <pre class="api-line-code">{{ $path }}</pre>
+</div>

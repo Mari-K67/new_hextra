@@ -1,0 +1,1 @@
+The maximum number of requests that can be executed within seconds specified in the `seconds_number` field.

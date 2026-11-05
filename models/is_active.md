@@ -1,0 +1,1 @@
+Whether the endpoint is active or not.

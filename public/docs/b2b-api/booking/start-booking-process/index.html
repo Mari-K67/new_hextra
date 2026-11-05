@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" id="favicon-svg" />
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
+<title>Start booking process – My Documentation</title>
+  <meta name="description" content=" Production Sandbox https://api.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/ https://api-sandbox.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/ This call is required. Request this call right after the [Create booking process] call. As the booking process is made asynchronously, repeatedly request the [Check booking process] call to know the status. The call starts the booking process." /><link rel="canonical" href="http://localhost:1313/docs/b2b-api/booking/start-booking-process/" itemprop="url" />
+
+<meta property="og:title" content="Start booking process">
+<meta
+  property="og:description"
+  content="
+    
+      
+  Production Sandbox
+
+
+
+https://api.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/
+  
+    
+
+  
+
+
+
+
+https://api-sandbox.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/
+  
+    
+
+  
+
+
+
+
+
+  
+
+  
+    
+This call is required.
+Request this call right after the [Create booking process] call.
+As the booking process is made asynchronously, repeatedly request the [Check booking process] call to know the status.
+
+
+  
+
+
+The call starts the booking process.
+    
+  ">
+<meta
+  property="og:type"
+  content="
+    article
+  ">
+<meta property="og:url" content="http://localhost:1313/docs/b2b-api/booking/start-booking-process/"><meta property="article:section" content="docs">
+
+<meta
+  property="article:published_time"
+  content="2025-03-24T00:00:00+00:00">
+
+
+<meta
+  property="article:modified_time"
+  content="2025-03-24T00:00:00+00:00">
+
+
+
+  <meta itemprop="name" content="Start booking process">
+  <meta itemprop="description" content="Production Sandbox https://api.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/ https://api-sandbox.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/ This call is required. Request this call right after the [Create booking process] call. As the booking process is made asynchronously, repeatedly request the [Check booking process] call to know the status. The call starts the booking process.">
+  <meta itemprop="datePublished" content="2025-03-24T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-03-24T00:00:00+00:00">
+  <meta itemprop="wordCount" content="2983">
+  <meta itemprop="keywords" content="B2b">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Start booking process">
+  <meta name="twitter:description" content="Production Sandbox https://api.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/ https://api-sandbox.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/ This call is required. Request this call right after the [Create booking process] call. As the booking process is made asynchronously, repeatedly request the [Check booking process] call to know the status. The call starts the booking process.">
+<link href="/css/compiled/main.css" rel="stylesheet" />
+    <link href="/css/variables.css" rel="stylesheet" />
+    <link href="/css/custom.css" rel="stylesheet" />
+
+  
+<script src="/js/main-head.js" integrity=""></script>
+
+  
+  
+  <script defer src="/js/shortcodes.js"></script>
+</head>
+<body>
+    <a href="#content" class="hx:sr-only hx:focus-visible:not-sr-only hx:focus-visible:fixed hx:focus-visible:z-50 hx:focus-visible:top-2 hx:focus-visible:left-2 hx:focus-visible:bg-primary-500 hx:focus-visible:text-white hx:focus-visible:px-4 hx:focus-visible:py-2 hx:focus-visible:rounded-md hx:focus-visible:text-sm hx:focus-visible:font-medium">Skip to content</a><div class="hextra-nav-container hx:sticky hx:top-0 hx:z-20 hx:w-full hx:bg-transparent hx:print:hidden">
+  <div
+    class="hextra-nav-container-blur hx:pointer-events-none hx:absolute hx:z-[-1] hx:h-full hx:w-full hx:bg-white hx:dark:bg-dark hx:shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] hx:contrast-more:shadow-[0_0_0_1px_#000] hx:dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] hx:contrast-more:dark:shadow-[0_0_0_1px_#fff]"
+  ></div>
+
+  <nav class="hextra-max-navbar-width hx:mx-auto hx:flex hx:items-center hx:justify-end hx:gap-1 hx:md:gap-2 hx:h-[var(--hextra-navbar-height)] hx:px-6">
+    <a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="/">
+    <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none">My Documentation</span>
+</a>
+<button
+    type="button"
+    class="hextra-search-trigger"
+    data-search-open
+    aria-haspopup="dialog"
+    aria-controls="hextra-search-dialog"
+    aria-label="Search..."
+  ><svg class="hextra-search-trigger-icon" focusable="false" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg><span class="hextra-search-trigger-label">Search...</span>
+    <kbd class="hextra-search-trigger-kbd">CTRL K</kbd>
+  </button><button type="button" aria-label="Menu" aria-expanded="false" class="hextra-hamburger-menu hx:cursor-pointer hx:-mr-1 hx:rounded-sm hx:p-1 hx:active:bg-gray-400/20 hx:md:hidden hx:hextra-focus-visible-inset"><svg height=24 fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg></button>
+  </nav>
+</div>
+
+  <div class="hx:mx-auto hx:flex hextra-max-page-width">
+    <aside class="hextra-sidebar-container hx:flex hx:flex-col hx:print:hidden hx:md:top-[var(--hextra-navbar-height)] hx:md:shrink-0 hx:md:w-64 hx:md:self-start hx:max-md:[transform:translate3d(0,-100%,0)] hx:md:sticky">
+  <div class="hextra-scrollbar hx:overflow-y-auto hx:overflow-x-hidden hx:p-4 hx:grow hx:md:h-[calc(100vh-var(--hextra-navbar-height)-var(--menu-height))]">
+    <ul class="hx:flex hx:flex-col hx:gap-1 hx:md:hidden">
+      
+      
+            <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:ltr:pr-8 hx:rtl:pl-8 hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Documentation</span>
+    </a>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+  </div><div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:ltr:pr-8 hx:rtl:pl-8 hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/b2b-api/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">B2B API</span>
+    </a>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+  </div>
+              <div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:ltr:pr-8 hx:rtl:pl-8 hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/b2b-api/booking/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Booking</span>
+    </a>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+  </div>
+              <div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      href="/docs/b2b-api/booking/start-booking-process/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Start booking process</span>
+    </a>
+  </div>
+  
+  
+  
+    <ul
+      class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'
+    ><li>
+              <a
+                href="#limitations"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Sandbox limitations</a>
+            </li>
+          <li>
+              <a
+                href="#request-example"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Request example</a>
+            </li>
+          <li>
+              <a
+                href="#request-body"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Request body</a>
+            </li>
+          <li>
+              <a
+                href="#response"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Response</a>
+            </li>
+          <li>
+              <a
+                href="#response-example"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Response example</a>
+            </li>
+          <li>
+              <a
+                href="#errors"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Errors</a>
+            </li>
+          <li>
+              <a
+                href="#error-handling-diagram"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Error Handling Diagram</a>
+            </li>
+          </ul>
+  
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/b2b-api/booking/create-booking-process/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Create booking process</span>
+    </a>
+  </div>
+              
+            </li></ul>
+      </div>
+            </li></ul>
+      </div>
+            </li></ul>
+      </div></li>
+    </ul>
+
+    <ul class="hx:flex hx:flex-col hx:gap-1 hx:max-md:hidden">
+        
+            <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:ltr:pr-8 hx:rtl:pl-8 hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/b2b-api/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">B2B API</span>
+    </a>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+  </div><div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:ltr:pr-8 hx:rtl:pl-8 hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/b2b-api/booking/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Booking</span>
+    </a>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+  </div>
+              <div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      href="/docs/b2b-api/booking/start-booking-process/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Start booking process</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/b2b-api/booking/create-booking-process/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Create booking process</span>
+    </a>
+  </div>
+              
+            </li></ul>
+      </div>
+            </li></ul>
+      </div></li>
+        
+      </ul>
+    </div>
+  
+  
+    <div class="  hx:sticky hx:bottom-0 hx:max-h-(--menu-height) hx:bg-white hx:dark:bg-dark hx:mx-4 hx:py-4 hx:shadow-[0_-12px_16px_#fff] hx:flex hx:items-center hx:gap-2 hx:border-gray-200 hx:dark:border-neutral-800 hx:dark:shadow-[0_-12px_16px_#111] hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:shadow-none hx:border-t" data-toggle-animation="show"><div class="hx:flex hx:grow hx:flex-col"><div class="hx:flex hx:justify-items-start hx:group" data-theme="light">
+  <button
+    title="Change theme"
+    data-state="closed"
+    data-location="bottom"
+    class="hextra-theme-toggle hx:cursor-pointer hx:rounded-md hx:text-left hx:font-medium hx:h-7 hx:px-2 hx:text-xs hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:font-medium hx:text-gray-600 hx:transition-colors hx:dark:text-gray-400 hx:grow"
+    type="button"
+    aria-label="Change theme"
+    aria-expanded="false"
+    aria-haspopup="menu"
+  >
+    <div class="hx:flex hx:items-center hx:gap-2 hx:capitalize"><svg height=12 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><span class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden">Light</span><svg height=12 class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg><span class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden">Dark</span><svg height=12 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="currentColor">
+  <path d="M 11.996094,2 C 6.4986225,2.0192368 2.03125,6.5024993 2.03125,12 c 0,5.497501 4.4673725,9.980763 9.964844,10 H 12 12.0039 c 5.497471,-0.01924 9.964844,-4.502499 9.964844,-10 0,-5.4975007 -4.467373,-9.9807632 -9.964844,-10 H 12 Z M 12,4 c 4.417218,0.017598 7.96875,3.5822356 7.96875,8 0,4.417764 -3.551532,7.982402 -7.96875,8 z" />
+</svg>
+<span class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden">System</span></div>
+  </button>
+  <ul
+    class="hextra-theme-toggle-options hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-lg hx:border hx:border-gray-200 hx:bg-white hx:p-1 hx:text-sm hx:shadow-lg hx:dark:border-neutral-700 hx:dark:bg-neutral-900"
+    style="position: fixed; inset: auto auto 0px 0px; margin: 0px; min-width: 100px;"
+    data-theme="light"
+    role="menu"
+  >
+    <li role="none" class="hx:flex hx:flex-col">
+      <button
+        type="button"
+        role="menuitemradio"
+        aria-checked="true"
+        tabindex="-1"
+        data-item="light"
+        class="hx:text-gray-700 hx:dark:text-gray-300 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:rounded-sm hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:text-left hx:w-full hx:bg-transparent hx:border-0"
+      >
+        Light
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </button>
+    </li>
+    <li role="none" class="hx:flex hx:flex-col">
+      <button
+        type="button"
+        role="menuitemradio"
+        aria-checked="false"
+        tabindex="-1"
+        data-item="dark"
+        class="hx:text-gray-700 hx:dark:text-gray-300 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:rounded-sm hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:text-left hx:w-full hx:bg-transparent hx:border-0"
+      >
+        Dark
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </button>
+    </li>
+    <li role="none" class="hx:flex hx:flex-col">
+      <button
+        type="button"
+        role="menuitemradio"
+        aria-checked="false"
+        tabindex="-1"
+        data-item="system"
+        class="hx:text-gray-700 hx:dark:text-gray-300 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:rounded-sm hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:text-left hx:w-full hx:bg-transparent hx:border-0"
+      >
+        System
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </button>
+    </li>
+  </ul>
+</div>
+</div></div></aside>
+    
+<nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="Table of contents">
+    <div class="hextra-scrollbar hx:sticky hx:top-[var(--hextra-navbar-height)] hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--hextra-navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#limitations">Sandbox limitations
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#request-example">Request example
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#request-body">Request body
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#response">Response
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#response-example">Response example
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#errors">Errors
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#book_hash_not_found">book_hash_not_found
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#booking_form_expired">booking_form_expired
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#chosen_payment_type_was_not_available_on_booking_form">chosen_payment_type_was_not_available_on_booking_form
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#credit_card_required">credit_card_required
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#double_booking_finish">double_booking_finish
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#email">email
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#incorrect_chosen_payment_type">incorrect_chosen_payment_type
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#incorrect_guests_number">incorrect_guests_number
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#incorrect_children_data">incorrect_children_data
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#incorrect_rooms_number">incorrect_rooms_number
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#insufficient_b2b_balance">insufficient_b2b_balance
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#order_not_found">order_not_found
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#rate_not_found">rate_not_found
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#return_path_required">return_path_required
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#unauthorized_group_booking">unauthorized_group_booking
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#invalid_upsell_attributes">invalid_upsell_attributes
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#invalid_upsell_uid">invalid_upsell_uid
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#invalid_upsell_data">invalid_upsell_data
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#arrival_date_differs_from_checkin_date">arrival_date_differs_from_checkin_date
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#not_enough_credit_card_data">not_enough_credit_card_data
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#incorrect_init_uuid_format">incorrect_init_uuid_format
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#incorrect_pay_uuid_format">incorrect_pay_uuid_format
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#card_type_not_supported">card_type_not_supported
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#sandbox_restriction">sandbox_restriction
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#supplier_data_required">supplier_data_required
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#no_pricing_data">no_pricing_data
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#timeout-unknown-and-5xx">timeout, unknown, and 5xx
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#error-handling-diagram">Error Handling Diagram
+        </a>
+      </li></ul>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
+        <button id="backToTop" tabindex="-1" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
+          <span>Scroll to top</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+    <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--hextra-navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main id="content" class="hx:w-full hx:min-w-0 hextra-max-content-width hx:px-6 hx:pt-4 hx:md:px-12">
+        
+        <div class="hx:mt-1.5 hx:flex hx:items-center hx:gap-1 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current">
+        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
+          <a href="/docs/" class="hx:inline-block hx:rounded-sm hx:hextra-focus-visible-inset">Documentation</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
+          <a href="/docs/b2b-api/" class="hx:inline-block hx:rounded-sm hx:hextra-focus-visible-inset">B2B API</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
+          <a href="/docs/b2b-api/booking/" class="hx:inline-block hx:rounded-sm hx:hextra-focus-visible-inset">Booking</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Start booking process</div>
+  </div>
+
+        <div class="content">
+          
+            <div class="hx:flex hx:flex-col hx:sm:flex-row hx:items-start hx:sm:items-center hx:sm:justify-between hx:gap-4 hx:mb-4">
+              <h1 class="hx:mb-0">Start booking process</h1>
+              
+            </div>
+          
+          
+          
+
+
+<div class="hextra-scrollbar hx:overflow-x-auto hx:overflow-y-hidden hx:overscroll-x-contain">
+  <div class="hx:mt-4 hx:flex hx:w-max hx:min-w-full hx:border-b hx:border-gray-200 hx:pb-px hx:dark:border-neutral-800" role="tablist"><button class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white hx:hextra-focus-visible-inset" id="tabs-tab-tabs-00-0" role="tab" type="button" aria-controls="tabs-panel-tabs-00-0" aria-selected="true" tabindex="0" data-state="selected"><span class="hx:inline-flex hx:items-center hx:gap-1.5"><span>Production</span></span></button><button class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white hx:hextra-focus-visible-inset" id="tabs-tab-tabs-00-1" role="tab" type="button" aria-controls="tabs-panel-tabs-00-1" aria-selected="false" tabindex="-1"><span class="hx:inline-flex hx:items-center hx:gap-1.5"><span> Sandbox</span></span></button></div>
+</div>
+<div><div class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block" id="tabs-panel-tabs-00-0" role="tabpanel" aria-labelledby="tabs-tab-tabs-00-0" aria-hidden="false" tabindex="0" data-state="selected"><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><pre><code>https://api.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+</div><div class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block" id="tabs-panel-tabs-00-1" role="tabpanel" aria-labelledby="tabs-tab-tabs-00-1" aria-hidden="true"><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><pre><code>https://api-sandbox.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+</div></div>
+
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li><strong>This call is required</strong>.</li>
+<li>Request this call right after the [Create booking process] call.</li>
+<li>As the booking process is made asynchronously, repeatedly request the [Check booking process] call to know the status.</li>
+</ul>
+</div>
+  </div>
+</div>
+
+<p>The call starts the booking process.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg></div>
+
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">If invalid user data is used, the data may be added to the stop list.</div>
+  </div>
+</div>
+
+<h2 data-hextra-search-id="limitations">Sandbox limitations<span class="hx:absolute hx:-mt-20" id="limitations"></span>
+    <a href="#limitations" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">Use only field values, IDs, API keys, and any static content from the sandbox environment within the sandbox. <strong>Do not use sandbox data in test or production environments, and do not mix data or configuration between different environments.</strong></div>
+  </div>
+</div>
+<ul>
+<li>The possible values for the <code>payment_type.type</code> field are <code>hotel</code> and <code>deposit</code>.</li>
+<li>The following fields are not supported: <code>payment_type.init_uuid</code>, <code>payment_type.pay_uuid</code>, <code>upsell_data</code>, and <code>return_path</code>.</li>
+<li>For all objects with the <code>currency_code</code> field the value is always <code>EUR</code>.</li>
+<li>The following errors are not supported: <code>book_hash_not_found</code>, <code>rate_not_found</code>, <code>return_path_required</code>, <code>not_enough_credit_card_data</code>, <code>incorrect_init_uuid_format</code>, and <code>incorrect_pay_uuid_format</code>.</li>
+</ul>
+<h2 data-hextra-search-id="request-example">Request example<span class="hx:absolute hx:-mt-20" id="request-example"></span>
+    <a href="#request-example" class="subheading-anchor" aria-label="Permalink for this section"></a></h2>
+
+
+<div class="hextra-scrollbar hx:overflow-x-auto hx:overflow-y-hidden hx:overscroll-x-contain">
+  <div class="hx:mt-4 hx:flex hx:w-max hx:min-w-full hx:border-b hx:border-gray-200 hx:pb-px hx:dark:border-neutral-800" role="tablist"><button class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white hx:hextra-focus-visible-inset" id="tabs-tab-tabs-04-0" role="tab" type="button" aria-controls="tabs-panel-tabs-04-0" aria-selected="true" tabindex="0" data-state="selected"><span class="hx:inline-flex hx:items-center hx:gap-1.5"><span>Production</span></span></button><button class="hextra-tabs-toggle hx:cursor-pointer hx:data-[state=selected]:border-primary-500 hx:data-[state=selected]:text-primary-600 hx:data-[state=selected]:dark:border-primary-500 hx:data-[state=selected]:dark:text-primary-600 hx:mr-2 hx:rounded-t hx:p-2 hx:font-medium hx:leading-5 hx:transition-colors hx:-mb-0.5 hx:select-none hx:border-b-2 hx:border-transparent hx:text-gray-600 hx:hover:border-gray-200 hx:hover:text-black hx:dark:text-gray-200 hx:dark:hover:border-neutral-800 hx:dark:hover:text-white hx:hextra-focus-visible-inset" id="tabs-tab-tabs-04-1" role="tab" type="button" aria-controls="tabs-panel-tabs-04-1" aria-selected="false" tabindex="-1"><span class="hx:inline-flex hx:items-center hx:gap-1.5"><span> Sandbox</span></span></button></div>
+</div>
+<div><div class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block" id="tabs-panel-tabs-04-0" role="tabpanel" aria-labelledby="tabs-tab-tabs-04-0" aria-hidden="false" tabindex="0" data-state="selected"><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>curl --user <span style="color:#e6db74">&#39;&lt;KEY_ID&gt;:&lt;API_KEY&gt;&#39;</span> <span style="color:#e6db74">&#39;https://api.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--data <span style="color:#e6db74">&#39;{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;language&#34;: &#34;en&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;arrival_datetime&#34;: &#34;2027-06-14T14:30:00&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;partner&#34;: {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;partner_order_id&#34;: &#34;9f1c2b7e-4a3d-4c8e-b1f2-6d7a8e9c0b13&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;comment&#34;: &#34;Corporate client, invoice to HQ.&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;amount_sell_b2b2c&#34;: &#34;520.00&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;payment_type&#34;: {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;type&#34;: &#34;deposit&#34;,,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;amount&#34;: &#34;412.50&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;currency_code&#34;: &#34;EUR&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;return_path&#34;: &#34;https://example.com/booking/return?order=9f1c2b7e&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;rooms&#34;: [
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      &#34;guests&#34;: [
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;first_name&#34;: &#34;Martin&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;gender&#34;: &#34;male&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;first_name&#34;: &#34;Emma&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;gender&#34;: &#34;female&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;first_name&#34;: &#34;Eliot&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;is_child&#34;: true,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;age&#34;: 11,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;gender&#34;: &#34;male&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      ]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  ],
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;upsell_data&#34;: [],
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;user&#34;: {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;email&#34;: &#34;john.smith@example.com&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;phone&#34;: &#34;12124567899&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;comment&#34;: &#34;Non-smoking room, high floor if possible.&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;supplier_data&#34;: {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;first_name_original&#34;: &#34;Peter&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;last_name_original&#34;: &#34;Collins&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;email&#34;: &#34;peter.collins@example.com&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;phone&#34;: &#34;12124567880&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}&#39;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+</div><div class="hextra-tabs-panel hx:rounded-sm hx:pt-6 hx:hidden hx:data-[state=selected]:block" id="tabs-panel-tabs-04-1" role="tabpanel" aria-labelledby="tabs-tab-tabs-04-1" aria-hidden="true"><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>curl --user <span style="color:#e6db74">&#39;&lt;KEY_ID&gt;:&lt;API_KEY&gt;&#39;</span> <span style="color:#e6db74">&#39;https://api-sandbox.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--data <span style="color:#e6db74">&#39;{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;language&#34;: &#34;en&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;arrival_datetime&#34;: &#34;2027-06-14T14:30:00&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;partner&#34;: {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;partner_order_id&#34;: &#34;9f1c2b7e-4a3d-4c8e-b1f2-6d7a8e9c0b13&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;comment&#34;: &#34;Corporate client, invoice to HQ.&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;amount_sell_b2b2c&#34;: &#34;520.00&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;payment_type&#34;: {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;type&#34;: &#34;deposit&#34;,,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;amount&#34;: &#34;412.50&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;currency_code&#34;: &#34;EUR&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;return_path&#34;: &#34;https://example.com/booking/return?order=9f1c2b7e&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;rooms&#34;: [
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      &#34;guests&#34;: [
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;first_name&#34;: &#34;Martin&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;gender&#34;: &#34;male&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;first_name&#34;: &#34;Emma&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;gender&#34;: &#34;female&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;first_name&#34;: &#34;Eliot&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;is_child&#34;: true,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;age&#34;: 11,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;gender&#34;: &#34;male&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      ]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  ],
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;upsell_data&#34;: [],
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;user&#34;: {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;email&#34;: &#34;john.smith@example.com&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;phone&#34;: &#34;12124567899&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;comment&#34;: &#34;Non-smoking room, high floor if possible.&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;supplier_data&#34;: {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;first_name_original&#34;: &#34;Peter&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;last_name_original&#34;: &#34;Collins&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;email&#34;: &#34;peter.collins@example.com&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;phone&#34;: &#34;12124567880&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}&#39;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+</div></div>
+
+<h2 data-hextra-search-id="request-body">Request body<span class="hx:absolute hx:-mt-20" id="request-body"></span>
+    <a href="#request-body" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><details id="arrival_datetime" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">arrival_datetime</span><span class="param-type">DateTime</span><span class="param-required">optional</span><a href="#arrival_datetime" class="param-anchor" aria-label="Permalink to arrival_datetime">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The estimated arrival time to the hotel (12-hour format with <code>*_day_period</code>; otherwise 24-hour format).</p>
+
+  </div>
+</details>
+
+<details id="language" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">language</span><span class="param-type">String</span><span class="param-required param-required--yes">required</span><a href="#language" class="param-anchor" aria-label="Permalink to language">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The language.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>The possible values:</p>
+<ul>
+<li><code>ar</code> — Arabic.</li>
+<li><code>bg</code> — Bulgarian.</li>
+<li><code>cs</code> — Czech.</li>
+<li><code>da</code> — Danish.</li>
+<li><code>de</code> — German.</li>
+<li><code>el</code> — Greek.</li>
+<li><code>en</code> — English.</li>
+<li><code>es</code> — Spanish.</li>
+<li><code>fi</code> — Finnish.</li>
+<li><code>fr</code> — French.</li>
+<li><code>he</code> — Hebrew.</li>
+<li><code>hu</code> — Hungarian.</li>
+<li><code>it</code> — Italian.</li>
+<li><code>ja</code> — Japanese.</li>
+<li><code>kk</code> — Kazakh.</li>
+<li><code>ko</code> — Korean.</li>
+<li><code>nl</code> — Dutch.</li>
+<li><code>no</code> — Norwegian Bokmål.</li>
+<li><code>pl</code> — Polish.</li>
+<li><code>pt</code> — Portuguese.</li>
+<li><code>pt_PT</code> — European Portuguese.</li>
+<li><code>ro</code> — Romanian.</li>
+<li><code>ru</code> — Russian.</li>
+<li><code>sq</code> — Albanian.</li>
+<li><code>sr</code> — Serbian.</li>
+<li><code>sv</code> — Swedish.</li>
+<li><code>th</code> — Thai.</li>
+<li><code>tr</code> — Turkish.</li>
+<li><code>uk</code> — Ukrainian.</li>
+<li><code>vi</code> — Vietnamese.</li>
+<li><code>zh_CN</code> — Simplified Chinese.</li>
+<li><code>zh_TW</code> — Traditional Chinese.</li>
+</ul></div>
+  </div>
+</div>
+
+  </div>
+</details>
+
+<details id="partner" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">partner</span><span class="param-type">Object</span><span class="param-required param-required--yes">required</span><a href="#partner" class="param-anchor" aria-label="Permalink to partner">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The partner information.</p>
+<details id="partner-partner_order_id" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">partner_order_id</span><span class="param-type">String</span><span class="param-required param-required--yes">required</span><a href="#partner-partner_order_id" class="param-anchor" aria-label="Permalink to partner_order_id">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The external booking ID in the <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" target="_blank" rel="noopener">UUID</a> format.</p>
+<p>The ID remains the same if you cancel a booking that:</p>
+<ul>
+<li>Is successful.</li>
+<li>Is failed.</li>
+<li>Has the fail status response from the Check booking process call.</li>
+</ul>
+<p>Use this field for the rest of the booking calls.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>The value should be unique for the order within the same contact.</li>
+<li>The minimum length is <code>3</code> character.</li>
+<li>The maximum length is <code>256</code> characters.</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+<details id="partner-comment" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">comment</span><span class="param-type">String</span><span class="param-required">optional</span><a href="#partner-comment" class="param-anchor" aria-label="Permalink to comment">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The partner booking internal comment.</p>
+<p>The comment isn’t sent to the hotel and not processed by the ETG API support team. It is visible only to the partner itself.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>The minimum length is <code>1</code> character.</li>
+<li>The maximum length is <code>256</code> character.</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+<details id="partner-amount_sell_b2b2c" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">amount_sell_b2b2c</span><span class="param-type">String</span><span class="param-required">optional</span><a href="#partner-amount_sell_b2b2c" class="param-anchor" aria-label="Permalink to amount_sell_b2b2c">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The resale price for the user in the contract currency.</p>
+<p>The value is accepted if transferred (even if automatic completion of the resale price value is activated) and is displayed in the confirmatory accounting documents for the partners.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>The minimum value is <code>1</code>.</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+
+  </div>
+</details>
+
+<details id="payment_type" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">payment_type</span><span class="param-type">Object</span><span class="param-required param-required--yes">required</span><a href="#payment_type" class="param-anchor" aria-label="Permalink to payment_type">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The order payment information.</p>
+<details id="payment_type-type" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">type</span><span class="param-type">String</span><span class="param-required param-required--yes">required</span><a href="#payment_type-type" class="param-anchor" aria-label="Permalink to type">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The payment type.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>The possible values:
+<ul>
+<li>
+<p><code>now</code>. Use it to allow the user to pay for the booking via the ETG payment system:</p>
+<ol>
+<li>Request the Create booking process call and get the card details.</li>
+<li>Request the Create credit card token call with the card details.</li>
+</ol>
+</li>
+<li>
+<p><code>hotel</code>. Use it to allow the user to pay for the booking upon check-in at the hotel. The user won’t be charged now.</p>
+</li>
+<li>
+<p><code>deposit</code>. Use it to allow you to charge the user bank card for the booking by yourself:</p>
+<ol>
+<li>You need to keep your ETG deposit sufficient. To increase funds, contact your account manager.</li>
+<li>The user makes a booking.</li>
+<li>You charge the user bank card.</li>
+<li>The ETG writes funds from your deposit by themselves during the reporting period.</li>
+</ol>
+<p>Every payment goes under a credit limit for the deposit.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+<details id="payment_type-amount" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">amount</span><span class="param-type">String</span><span class="param-required param-required--yes">required</span><a href="#payment_type-amount" class="param-anchor" aria-label="Permalink to amount">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The booking amount in the currency specified by the <code>currency_code</code> field.</p>
+  </div>
+</details>
+<details id="payment_type-currency_code" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">currency_code</span><span class="param-type">String</span><span class="param-required param-required--yes">required</span><a href="#payment_type-currency_code" class="param-anchor" aria-label="Permalink to currency_code">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The amount currency code in the <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank" rel="noopener">ISO 4217</a> format.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>The length is <code>3</code> characters.</li>
+<li>The possible values:
+<ul>
+<li><code>AED</code>.</li>
+<li><code>AFN</code>.</li>
+<li><code>ALL</code>.</li>
+<li><code>AMD</code>.</li>
+<li><code>ANG</code>.</li>
+<li><code>AOA</code>.</li>
+<li><code>ARS</code>.</li>
+<li><code>AUD</code>.</li>
+<li><code>AWG</code>.</li>
+<li><code>AZN</code>.</li>
+<li><code>BAM</code>.</li>
+<li><code>BBD</code>.</li>
+<li><code>BDT</code>.</li>
+<li><code>BGN</code>.</li>
+<li><code>BHD</code>.</li>
+<li><code>BIF</code>.</li>
+<li><code>BMD</code>.</li>
+<li><code>BND</code>.</li>
+<li><code>BOB</code>.</li>
+<li><code>BOV</code>.</li>
+<li><code>BRL</code>.</li>
+<li><code>BSD</code>.</li>
+<li><code>BTN</code>.</li>
+<li><code>BWP</code>.</li>
+<li><code>BYR</code>.</li>
+<li><code>BYN</code>.</li>
+<li><code>BZD</code>.</li>
+<li><code>CAD</code>.</li>
+<li><code>CDF</code>.</li>
+<li><code>CHE</code>.</li>
+<li><code>CHF</code>.</li>
+<li><code>CHW</code>.</li>
+<li><code>CLF</code>.</li>
+<li><code>CLP</code>.</li>
+<li><code>CNY</code>.</li>
+<li><code>COP</code>.</li>
+<li><code>COU</code>.</li>
+<li><code>CRC</code>.</li>
+<li><code>CUC</code>.</li>
+<li><code>CUP</code>.</li>
+<li><code>CVE</code>.</li>
+<li><code>CZK</code>.</li>
+<li><code>DJF</code>.</li>
+<li><code>DKK</code>.</li>
+<li><code>DOP</code>.</li>
+<li><code>DZD</code>.</li>
+<li><code>EGP</code>.</li>
+<li><code>ERN</code>.</li>
+<li><code>ETB</code>.</li>
+<li><code>EUR</code>.</li>
+<li><code>FJD</code>.</li>
+<li><code>FKP</code>.</li>
+<li><code>GBP</code>.</li>
+<li><code>GEL</code>.</li>
+<li><code>GHS</code>.</li>
+<li><code>GIP</code>.</li>
+<li><code>GMD</code>.</li>
+<li><code>GNF</code>.</li>
+<li><code>GTQ</code>.</li>
+<li><code>GYD</code>.</li>
+<li><code>HKD</code>.</li>
+<li><code>HNL</code>.</li>
+<li><code>HRK</code>.</li>
+<li><code>HTG</code>.</li>
+<li><code>HUF</code>.</li>
+<li><code>IDR</code>.</li>
+<li><code>ILS</code>.</li>
+<li><code>INR</code>.</li>
+<li><code>IQD</code>.</li>
+<li><code>IRR</code>.</li>
+<li><code>ISK</code>.</li>
+<li><code>JMD</code>.</li>
+<li><code>JOD</code>.</li>
+<li><code>JPY</code>.</li>
+<li><code>KES</code>.</li>
+<li><code>KGS</code>.</li>
+<li><code>KHR</code>.</li>
+<li><code>KMF</code>.</li>
+<li><code>KPW</code>.</li>
+<li><code>KRW</code>.</li>
+<li><code>KWD</code>.</li>
+<li><code>KYD</code>.</li>
+<li><code>KZT</code>.</li>
+<li><code>LAK</code>.</li>
+<li><code>LBP</code>.</li>
+<li><code>LKR</code>.</li>
+<li><code>LRD</code>.</li>
+<li><code>LSL</code>.</li>
+<li><code>LTL</code>.</li>
+<li><code>LVL</code>.</li>
+<li><code>LYD</code>.</li>
+<li><code>MAD</code>.</li>
+<li><code>MDL</code>.</li>
+<li><code>MGA</code>.</li>
+<li><code>MKD</code>.</li>
+<li><code>MMK</code>.</li>
+<li><code>MNT</code>.</li>
+<li><code>MOP</code>.</li>
+<li><code>MRO</code>.</li>
+<li><code>MUR</code>.</li>
+<li><code>MVR</code>.</li>
+<li><code>MWK</code>.</li>
+<li><code>MXN</code>.</li>
+<li><code>MXV</code>.</li>
+<li><code>MYR</code>.</li>
+<li><code>MZN</code>.</li>
+<li><code>NAD</code>.</li>
+<li><code>NGN</code>.</li>
+<li><code>NIO</code>.</li>
+<li><code>NOK</code>.</li>
+<li><code>NPR</code>.</li>
+<li><code>NZD</code>.</li>
+<li><code>OMR</code>.</li>
+<li><code>PAB</code>.</li>
+<li><code>PEN</code>.</li>
+<li><code>PGK</code>.</li>
+<li><code>PHP</code>.</li>
+<li><code>PKR</code>.</li>
+<li><code>PLN</code>.</li>
+<li><code>PYG</code>.</li>
+<li><code>QAR</code>.</li>
+<li><code>RON</code>.</li>
+<li><code>RSD</code>.</li>
+<li><code>RUB</code>.</li>
+<li><code>RWF</code>.</li>
+<li><code>SAR</code>.</li>
+<li><code>SBD</code>.</li>
+<li><code>SCR</code>.</li>
+<li><code>SDG</code>.</li>
+<li><code>SEK</code>.</li>
+<li><code>SGD</code>.</li>
+<li><code>SHP</code>.</li>
+<li><code>SLL</code>.</li>
+<li><code>SOS</code>.</li>
+<li><code>SRD</code>.</li>
+<li><code>SSP</code>.</li>
+<li><code>STD</code>.</li>
+<li><code>SVC</code>.</li>
+<li><code>SYP</code>.</li>
+<li><code>SZL</code>.</li>
+<li><code>THB</code>.</li>
+<li><code>TJS</code>.</li>
+<li><code>TMT</code>.</li>
+<li><code>TND</code>.</li>
+<li><code>TOP</code>.</li>
+<li><code>TRY</code>.</li>
+<li><code>TTD</code>.</li>
+<li><code>TWD</code>.</li>
+<li><code>TZS</code>.</li>
+<li><code>UAH</code>.</li>
+<li><code>UGX</code>.</li>
+<li><code>USD</code>.</li>
+<li><code>USN</code>.</li>
+<li><code>USS</code>.</li>
+<li><code>UYI</code>.</li>
+<li><code>UYU</code>.</li>
+<li><code>UZS</code>.</li>
+<li><code>VEF</code>.</li>
+<li><code>VND</code>.</li>
+<li><code>VUV</code>.</li>
+<li><code>WST</code>.</li>
+<li><code>XAF</code>.</li>
+<li><code>XAG</code>.</li>
+<li><code>XAU</code>.</li>
+<li><code>XBA</code>.</li>
+<li><code>XBB</code>.</li>
+<li><code>XBC</code>.</li>
+<li><code>XBD</code>.</li>
+<li><code>XCD</code>.</li>
+<li><code>XDR</code>.</li>
+<li><code>XFU</code>.</li>
+<li><code>XOF</code>.</li>
+<li><code>XPD</code>.</li>
+<li><code>XPF</code>.</li>
+<li><code>XPT</code>.</li>
+<li><code>XSU</code>.</li>
+<li><code>XTS</code>.</li>
+<li><code>XUA</code>.</li>
+<li><code>YER</code>.</li>
+<li><code>ZAR</code>.</li>
+<li><code>ZMW</code>.</li>
+<li><code>ZWL</code>.</li>
+</ul>
+</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+<details id="payment_type-init_uuid" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">init_uuid</span><span class="param-type">String</span><span class="param-required">optional</span><a href="#payment_type-init_uuid" class="param-anchor" aria-label="Permalink to init_uuid">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The external booking ID.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>The length is <code>36</code> characters.</li>
+<li>Must be unique for every payment. Otherwise, the ETG will return an error.</li>
+<li>The value matches the pattern: <code>^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$</code>.</li>
+<li>Is required for bookings where the <code>is_need_credit_card_data</code> field was passed with the <code>true</code> value.</li>
+<li>Should be the same with the <code>init_uuid</code> field value from the Create credit card token call.</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+<details id="payment_type-pay_uuid" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">pay_uuid</span><span class="param-type">String</span><span class="param-required">optional</span><a href="#payment_type-pay_uuid" class="param-anchor" aria-label="Permalink to pay_uuid">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The external booking payment ID in the <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" target="_blank" rel="noopener">UUID</a> format.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>The length is <code>36</code> characters.</li>
+<li>Must be unique for every payment. Otherwise, the ETG will return an error.</li>
+<li>The value matches the pattern: <code>^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$</code>.</li>
+<li>Is required for bookings where the <code>is_need_credit_card_data</code> field was passed with the <code>true</code> value.</li>
+<li>Should be the same with the <code>pay_uuid</code> field value from the Create credit card token call.</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+
+  </div>
+</details>
+
+<details id="upsell_data" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">upsell_data</span><span class="param-type">[Object]</span><span class="param-required">optional</span><a href="#upsell_data" class="param-anchor" aria-label="Permalink to upsell_data">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The order upsell information.
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>Set these parameters only when the user really needs additional services.</li>
+<li>Only one early check-in and one late check-out should be requested and selected.</li>
+</ul>
+</div>
+  </div>
+</div>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">For step-by-step instructions and code examples on processing this field, see Upsells.</div>
+  </div>
+</div>
+</p>
+<details id="upsell_data-attributes" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">attributes</span><span class="param-type">Object</span><span class="param-required">optional</span><a href="#upsell_data-attributes" class="param-anchor" aria-label="Permalink to attributes">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The upsell check-in and check-out dates.</p>
+<details id="attributes-checkin_datetime" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">checkin_datetime</span><span class="param-type">Datetime</span><span class="param-required">optional</span><a href="#attributes-checkin_datetime" class="param-anchor" aria-label="Permalink to checkin_datetime">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The upsell check-in date and time (RFC 3339 format with a time zone, for example, <code>2027-06-14T10:00:00Z</code>). Values without a time zone or in the 12-hour format are rejected with the <code>invalid_json_format</code> error.</p>
+  </div>
+</details>
+<details id="attributes-checkout_datetime" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">checkout_datetime</span><span class="param-type">Datetime</span><span class="param-required">optional</span><a href="#attributes-checkout_datetime" class="param-anchor" aria-label="Permalink to checkout_datetime">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The upsell check-out date and time (RFC 3339 format with a time zone, for example, <code>2027-06-18T16:00:00Z</code>). Values without a time zone or in the 12-hour format are rejected with the <code>invalid_json_format</code> error.</p>
+  </div>
+</details>
+  </div>
+</details>
+<details id="upsell_data-name" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">name</span><span class="param-type">String</span><span class="param-required">optional</span><a href="#upsell_data-name" class="param-anchor" aria-label="Permalink to name">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The upsell name.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>The possible values:
+<ul>
+<li><code>early_checkin</code>.</li>
+<li><code>late_checkout</code>.</li>
+</ul>
+</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+<details id="upsell_data-rule_id" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">rule_id</span><span class="param-type">Int</span><span class="param-required">optional</span><a href="#upsell_data-rule_id" class="param-anchor" aria-label="Permalink to rule_id">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The upsell rule ID.</p>
+  </div>
+</details>
+<details id="upsell_data-uid" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">uid</span><span class="param-type">String</span><span class="param-required">optional</span><a href="#upsell_data-uid" class="param-anchor" aria-label="Permalink to uid">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The upsell ID.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>Use the value of the <code>uid</code> field from the Create booking process call.</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+
+  </div>
+</details>
+
+<details id="return_path" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">return_path</span><span class="param-type">String</span><span class="param-required">optional</span><a href="#return_path" class="param-anchor" aria-label="Permalink to return_path">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The URL at your side to redirect the user to. It is done by the payment gateway after 3D Secure check. The reason the ETG needs it.</p>
+<p><b>This field is required</b> if the rate you are booking has the <code>payment_types</code> field with the <code>now</code> value.</p>
+<p>The field <code>data_3ds</code> of the Check booking process call will have the <code>null</code> value if:</p>
+<ul>
+<li>You don’t pass this field.</li>
+<li>The issuing bank requires 3D Secure check.</li>
+</ul>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>Must have the HTTPS scheme.</li>
+<li>Might have GET parameters.</li>
+<li>The minimum length is <code>1</code> character.</li>
+<li>The maximum length is <code>256</code> character.</li>
+</ul>
+</div>
+  </div>
+</div>
+
+  </div>
+</details>
+
+<details id="rooms" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">rooms</span><span class="param-type">[Object]</span><span class="param-required param-required--yes">required</span><a href="#rooms" class="param-anchor" aria-label="Permalink to rooms">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The guests’ information for the rooms.</p>
+<details id="rooms-guests" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">guests</span><span class="param-type">[Object]</span><span class="param-required param-required--yes">required</span><a href="#rooms-guests" class="param-anchor" aria-label="Permalink to guests">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The guests’ information.
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">The <code>is_child</code> and <code>age</code> parameters are required when transferring a child’s name.</div>
+  </div>
+</div>
+</p>
+<details id="guests-first_name" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">first_name</span><span class="param-type">String</span><span class="param-required">required or optional</span><a href="#guests-first_name" class="param-anchor" aria-label="Permalink to first_name">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The guest first name.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>It is mandatory to provide the first name for at least one guest in each booked room.</li>
+<li>The minimum length is <code>1</code> character.</li>
+<li>The maximum length is <code>50</code> characters.</li>
+<li>Digits and non-word symbols are prohibited, field should contain only unicode letters (Latin, Cyrillic, Hebrew, Hindi, Bengali, Thai etc.), spaces or following special characters: <code>'-,.’</code>.</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+<details id="guests-last_name" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">last_name</span><span class="param-type">String</span><span class="param-required">required or optional</span><a href="#guests-last_name" class="param-anchor" aria-label="Permalink to last_name">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The guest last name. For test purposes use the <code>Ratehawk</code> value.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>It is mandatory to provide the last name for at least one guest in each booked room.</li>
+<li>The minimum length is <code>1</code> character.</li>
+<li>The maximum length is <code>50</code> characters.</li>
+<li>Digits and non-word symbols are prohibited, field should contain only unicode letters (Latin, Cyrillic, Hebrew, Hindi, Bengali, Thai etc.), spaces or following special characters: <code>'-,.’</code>.</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+<details id="guests-is_child" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">is_child</span><span class="param-type">Boolean</span><span class="param-required">required or optional</span><a href="#guests-is_child" class="param-anchor" aria-label="Permalink to is_child">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>Whether the guest is a child or not.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">Guests are considered adults unless <code>is_child</code> = <code>true</code>, even if their <code>age</code> is that of a child.</div>
+  </div>
+</div>
+  </div>
+</details>
+<details id="guests-age" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">age</span><span class="param-type">Int</span><span class="param-required">required or optional</span><a href="#guests-age" class="param-anchor" aria-label="Permalink to age">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The child age in years.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>Specify the child&rsquo;s age if there are children in the booking request (<code>is_child</code> = <code>true</code>).</li>
+<li>The minimum value is <code>0</code>.</li>
+<li>The maximum value is <code>17</code>.</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+<details id="guests-gender" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">gender</span><span class="param-type">String</span><span class="param-required">optional</span><a href="#guests-gender" class="param-anchor" aria-label="Permalink to gender">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The guest gender.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>Is required if the hotel you intend to book has the <code>is_gender_specification_required</code> field with the <code>true</code> value. The field is returned in the Retrieve hotel content and Create booking process call responses.</li>
+<li>The possible values:
+<ul>
+<li><code>male</code>.</li>
+<li><code>female</code>.</li>
+<li><code>unknown</code>.</li>
+</ul>
+</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+  </div>
+</details>
+
+  </div>
+</details>
+
+<details id="user" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">user</span><span class="param-type">Object</span><span class="param-required param-required--yes">required</span><a href="#user" class="param-anchor" aria-label="Permalink to user">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The partner manager additional information.</p>
+<details id="user-comment" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">comment</span><span class="param-type">String</span><span class="param-required">optional</span><a href="#user-comment" class="param-anchor" aria-label="Permalink to comment">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The partner manager comments sent to the hotel.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>The minimum length is <code>1</code> character.</li>
+<li>The maximum length is <code>256</code> character.</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+<details id="user-email" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">email</span><span class="param-type">String</span><span class="param-required param-required--yes">required</span><a href="#user-email" class="param-anchor" aria-label="Permalink to email">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The partner manager email address for contact purposes and sending transactional emails. The email address must be valid.</p>
+<p>To view all bookings in your account, get a Master or Supervisor type of account. With Manager type the user will see only reservations with their own email address.</p>
+  </div>
+</details>
+<details id="user-phone" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">phone</span><span class="param-type">String</span><span class="param-required param-required--yes">required</span><a href="#user-phone" class="param-anchor" aria-label="Permalink to phone">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The partner manager phone number for contacting purposes. The phone number must be valid.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>The minimum length is <code>5</code> characters.</li>
+<li>The maximum length is <code>35</code> characters.</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+
+  </div>
+</details>
+
+<details id="supplier_data" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">supplier_data</span><span class="param-type">Object</span><span class="param-required">required or optional</span><a href="#supplier_data" class="param-anchor" aria-label="Permalink to supplier_data">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The contact details of the user who initiated the booking.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">This data is not transmitted to the hotel.</div>
+  </div>
+</div>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>To know if the field is required for you, contact your account manager.</li>
+</ul>
+</div>
+  </div>
+</div>
+<details id="supplier_data-first_name_original" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">first_name_original</span><span class="param-type">String</span><span class="param-required param-required--yes">required</span><a href="#supplier_data-first_name_original" class="param-anchor" aria-label="Permalink to first_name_original">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The first name of the user who initiated the booking.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>To know if the field is required for you, contact your account manager.</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+<details id="supplier_data-last_name_original" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">last_name_original</span><span class="param-type">String</span><span class="param-required param-required--yes">required</span><a href="#supplier_data-last_name_original" class="param-anchor" aria-label="Permalink to last_name_original">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The last name of the user who initiated the booking.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>To know if the field is required for you, contact your account manager.</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+<details id="supplier_data-email" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">email</span><span class="param-type">String</span><span class="param-required param-required--yes">required</span><a href="#supplier_data-email" class="param-anchor" aria-label="Permalink to email">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The email address of the user who initiated the booking.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>To know if the field is required for you, contact your account manager.</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+<details id="supplier_data-phone" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">phone</span><span class="param-type">String</span><span class="param-required param-required--yes">required</span><a href="#supplier_data-phone" class="param-anchor" aria-label="Permalink to phone">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The phone number of the user who initiated the booking.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><ul>
+<li>To know if the field is required for you, contact your account manager.</li>
+<li>The minimum length is <code>5</code> characters.</li>
+<li>The maximum length is <code>35</code> characters.</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</details>
+
+  </div>
+</details>
+
+<h2 data-hextra-search-id="response">Response<span class="hx:absolute hx:-mt-20" id="response"></span>
+    <a href="#response" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><details id="data" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" open>
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">data</span><span class="param-type">Object</span><a href="#data" class="param-anchor" aria-label="Permalink to data">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>Returns null.</p>
+
+  </div>
+</details>
+
+<details id="debug" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">debug</span><span class="param-type">Object</span><a href="#debug" class="param-anchor" aria-label="Permalink to debug">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>Additional information about the response.<br>
+This field is intended for development and debugging, as well as for diagnostics and troubleshooting.<br>
+May be null if the request completed without warnings and errors.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">The debug field is not intended for production monitoring. Its structure may change without notice.</div>
+  </div>
+</div>
+<details id="api_endpoint" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">api_endpoint</span><span class="param-type">Object</span><a href="#api_endpoint" class="param-anchor" aria-label="Permalink to api_endpoint">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>Info about rate limits and endpoint activity.</p>
+<details id="endpoint" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">endpoint</span><span class="param-type">String</span><a href="#endpoint" class="param-anchor" aria-label="Permalink to endpoint">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>API endpoint.</p>
+  </div>
+</details>
+<details id="is_active" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">is_active</span><span class="param-type">Boolean</span><a href="#is_active" class="param-anchor" aria-label="Permalink to is_active">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>Whether the endpoint is active or not.</p>
+  </div>
+</details>
+<details id="is_limited" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">is_limited</span><span class="param-type">Boolean</span><a href="#is_limited" class="param-anchor" aria-label="Permalink to is_limited">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>Whether the endpoint has a limit for the request in seconds or not.</p>
+  </div>
+</details>
+<details id="remaining" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">remaining</span><span class="param-type">Int</span><a href="#remaining" class="param-anchor" aria-label="Permalink to remaining">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>Number of requests remaining before the rate limit is reached in the current period.</p>
+  </div>
+</details>
+<details id="requests_number" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">requests_number</span><span class="param-type">Int</span><a href="#requests_number" class="param-anchor" aria-label="Permalink to requests_number">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The maximum number of requests that can be executed within seconds specified in the <code>seconds_number</code> field.</p>
+  </div>
+</details>
+<details id="reset" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">reset</span><span class="param-type">String</span><a href="#reset" class="param-anchor" aria-label="Permalink to reset">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The time and date when the rate limit will be reset and remaining requests will be restored to its maximum (requests_number).</p>
+  </div>
+</details>
+<details id="seconds_number" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">seconds_number</span><span class="param-type">Int</span><a href="#seconds_number" class="param-anchor" aria-label="Permalink to seconds_number">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The number of seconds within the request can be executed. Shouldn’t exceed the value of the <code>requests_number</code> field.</p>
+  </div>
+</details>
+  </div>
+</details>
+<details id="request" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">request</span><span class="param-type">[Object]</span><a href="#request" class="param-anchor" aria-label="Permalink to request">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The full structure of the partner&rsquo;s request as received.</p>
+  </div>
+</details>
+<details id="method" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">method</span><span class="param-type">String</span><a href="#method" class="param-anchor" aria-label="Permalink to method">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>HTTP request method (e.g. POST, GET).</p>
+  </div>
+</details>
+<details id="real_ip" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">real_ip</span><span class="param-type">String</span><a href="#real_ip" class="param-anchor" aria-label="Permalink to real_ip">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The detected client IP.</p>
+  </div>
+</details>
+<details id="request_id" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">request_id</span><span class="param-type">String</span><a href="#request_id" class="param-anchor" aria-label="Permalink to request_id">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>Unique internal request ID.</p>
+  </div>
+</details>
+<details id="key_id" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">key_id</span><span class="param-type">Int</span><a href="#key_id" class="param-anchor" aria-label="Permalink to key_id">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>Identifiers of your API key.</p>
+  </div>
+</details>
+<details id="api_key_id" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">api_key_id</span><span class="param-type">Int</span><a href="#api_key_id" class="param-anchor" aria-label="Permalink to api_key_id">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>Identifiers of your API key.</p>
+  </div>
+</details>
+<details id="utcnow" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">utcnow</span><span class="param-type">String</span><a href="#utcnow" class="param-anchor" aria-label="Permalink to utcnow">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>UTC timestamp of request handling start.</p>
+  </div>
+</details>
+<details id="validation_error" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">validation_error</span><span class="param-type">String</span><a href="#validation_error" class="param-anchor" aria-label="Permalink to validation_error">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>Error description (present only for requests with invalid parameters).</p>
+  </div>
+</details>
+
+  </div>
+</details>
+
+<details id="status" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">status</span><span class="param-type">String</span><a href="#status" class="param-anchor" aria-label="Permalink to status">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The HTTP status code description.</p>
+
+  </div>
+</details>
+
+<details id="error" class="param-details hx:last-of-type:mb-0 hx:rounded-lg hx:bg-neutral-50 hx:dark:bg-neutral-800 hx:p-2 hx:mt-4 hx:group" >
+  <summary class="param-summary hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-800 hx:before:mr-1 hx:before:inline-block hx:before:transition-transform hx:before:content-[''] hx:dark:before:invert hx:rtl:before:rotate-180 hx:group-open:before:rotate-90">
+    <span class="param-title">error</span><span class="param-type">String</span><a href="#error" class="param-anchor" aria-label="Permalink to error">#</a></summary>
+  <div class="hx:p-2 hx:overflow-hidden">
+    <p>The error description.</p>
+<p>Can have the <code>null</code> value if the request was made without errors.</p>
+
+  </div>
+</details>
+
+<h2 data-hextra-search-id="response-example">Response example<span class="hx:absolute hx:-mt-20" id="response-example"></span>
+    <a href="#response-example" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;data&#34;</span>: <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;debug&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;api_endpoint&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;endpoint&#34;</span>: <span style="color:#e6db74">&#34;api/b2b/v3/hotel/order/booking/finish&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;is_active&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;is_limited&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;remaining&#34;</span>: <span style="color:#ae81ff">29</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;requests_number&#34;</span>: <span style="color:#ae81ff">30</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;reset&#34;</span>: <span style="color:#e6db74">&#34;2027-03-10T12:25:00&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;seconds_number&#34;</span>: <span style="color:#ae81ff">60</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;request&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;language&#34;</span>: <span style="color:#e6db74">&#34;en&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;arrival_datetime&#34;</span>: <span style="color:#e6db74">&#34;2027-06-14T14:30:00&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;partner&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;partner_order_id&#34;</span>: <span style="color:#e6db74">&#34;9f1c2b7e-4a3d-4c8e-b1f2-6d7a8e9c0b13&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;comment&#34;</span>: <span style="color:#e6db74">&#34;Corporate client, invoice to HQ.&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;amount_sell_b2b2c&#34;</span>: <span style="color:#e6db74">&#34;520.00&#34;</span>
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;payment_type&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;now&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;amount&#34;</span>: <span style="color:#e6db74">&#34;412.50&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;currency_code&#34;</span>: <span style="color:#e6db74">&#34;EUR&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;init_uuid&#34;</span>: <span style="color:#e6db74">&#34;c44ef1ba-595b-437f-ad14-74ce39a0f9ad&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;pay_uuid&#34;</span>: <span style="color:#e6db74">&#34;797870e3-e1f0-470a-87b3-38694f58bed1&#34;</span>
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;return_path&#34;</span>: <span style="color:#e6db74">&#34;https://example.com/booking/return?order=9f1c2b7e&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;rooms&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;guests&#34;</span>: [
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;first_name&#34;</span>: <span style="color:#e6db74">&#34;Martin&#34;</span>, 
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;last_name&#34;</span>: <span style="color:#e6db74">&#34;Smith&#34;</span>, 
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;gender&#34;</span>: <span style="color:#e6db74">&#34;male&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;first_name&#34;</span>: <span style="color:#e6db74">&#34;Emma&#34;</span>, 
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;last_name&#34;</span>: <span style="color:#e6db74">&#34;Smith&#34;</span>, 
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;gender&#34;</span>: <span style="color:#e6db74">&#34;female&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;first_name&#34;</span>: <span style="color:#e6db74">&#34;Eliot&#34;</span>, 
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;last_name&#34;</span>: <span style="color:#e6db74">&#34;Smith&#34;</span>, 
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;is_child&#34;</span>: <span style="color:#66d9ef">true</span>, 
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;age&#34;</span>: <span style="color:#ae81ff">11</span>, 
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;gender&#34;</span>: <span style="color:#e6db74">&#34;male&#34;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          ]
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      ],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;upsell_data&#34;</span>: [],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;user&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;email&#34;</span>: <span style="color:#e6db74">&#34;john.smith@example.com&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;phone&#34;</span>: <span style="color:#e6db74">&#34;12124567899&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;comment&#34;</span>: <span style="color:#e6db74">&#34;Non-smoking room, high floor if possible.&#34;</span>
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;supplier_data&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;first_name_original&#34;</span>: <span style="color:#e6db74">&#34;Peter&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;last_name_original&#34;</span>: <span style="color:#e6db74">&#34;Collins&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;email&#34;</span>: <span style="color:#e6db74">&#34;peter.collins@example.com&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;phone&#34;</span>: <span style="color:#e6db74">&#34;12124567880&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;method&#34;</span>: <span style="color:#e6db74">&#34;POST&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;real_ip&#34;</span>: <span style="color:#e6db74">&#34;104.30.161.77&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;request_id&#34;</span>: <span style="color:#e6db74">&#34;9825cb9520644dce46912a48162fb743&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;key_id&#34;</span>: <span style="color:#ae81ff">1234</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;api_key_id&#34;</span>: <span style="color:#ae81ff">1234</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;utcnow&#34;</span>: <span style="color:#e6db74">&#34;2027-03-10T12:24:05.091214&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;status&#34;</span>: <span style="color:#e6db74">&#34;ok&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;error&#34;</span>: <span style="color:#66d9ef">null</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2 data-hextra-search-id="errors">Errors<span class="hx:absolute hx:-mt-20" id="errors"></span>
+    <a href="#errors" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The <code>error</code> field has the value specified in the headers below.</p>
+<h3 data-hextra-search-id="book_hash_not_found"><code>book_hash_not_found</code><span class="hx:absolute hx:-mt-20" id="book_hash_not_found"></span>
+    <a href="#book_hash_not_found" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A rare internal error when the ETG couldn’t recognize the <code>book_hash</code> used in the booking.</p>
+<p>After getting the error, the only option is to find another rate and continue with it.</p>
+<h3 data-hextra-search-id="booking_form_expired"><code>booking_form_expired</code><span class="hx:absolute hx:-mt-20" id="booking_form_expired"></span>
+    <a href="#booking_form_expired" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In case [Create booking process] has been expired.</p>
+<p>Request a new [Create booking process] with a different <code>partner_order_id</code>.</p>
+<h3 data-hextra-search-id="chosen_payment_type_was_not_available_on_booking_form"><code>chosen_payment_type_was_not_available_on_booking_form</code><span class="hx:absolute hx:-mt-20" id="chosen_payment_type_was_not_available_on_booking_form"></span>
+    <a href="#chosen_payment_type_was_not_available_on_booking_form" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The <code>payment_type</code> field values don’t match any of the <code>payment_types</code> field values in the response of the [Create booking process] call.</p>
+<p>Try to change the <code>payment_type</code> field value according to the <code>payment_types</code> field values in the response.</p>
+<h3 data-hextra-search-id="credit_card_required"><code>credit_card_required</code><span class="hx:absolute hx:-mt-20" id="credit_card_required"></span>
+    <a href="#credit_card_required" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A credit card is required to complete the booking.</p>
+<h3 data-hextra-search-id="double_booking_finish"><code>double_booking_finish</code><span class="hx:absolute hx:-mt-20" id="double_booking_finish"></span>
+    <a href="#double_booking_finish" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>An attempt to finish the booking for the second time while the status of the first attempt isn’t an error.</p>
+<h3 data-hextra-search-id="email"><code>email</code><span class="hx:absolute hx:-mt-20" id="email"></span>
+    <a href="#email" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The provided email address isn’t valid.</p>
+<h3 data-hextra-search-id="incorrect_chosen_payment_type"><code>incorrect_chosen_payment_type</code><span class="hx:absolute hx:-mt-20" id="incorrect_chosen_payment_type"></span>
+    <a href="#incorrect_chosen_payment_type" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Invalid data provided in the <code>payment_type</code> field of the call request. The supplied <code>type</code>, <code>amount</code>, and/or <code>currency_code</code> values do not match any of the <code>payment_type</code> options received from the [Create booking process] call.</p>
+<h3 data-hextra-search-id="incorrect_guests_number"><code>incorrect_guests_number</code><span class="hx:absolute hx:-mt-20" id="incorrect_guests_number"></span>
+    <a href="#incorrect_guests_number" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The adult guest number doesn’t match the adult guest number in the request of the [Retrieve hotelpage] call.</p>
+<p>Try to change the <code>rooms</code> field item number according to the <code>guests</code> field values in the request.</p>
+<p>The total number of adults derived from rooms[].guests[] does not match the search query. Any guest without <code>is_child</code> = <code>true</code> is treated as an adult (the <code>age</code> field alone does not mark a guest as a child).</p>
+<h3 data-hextra-search-id="incorrect_children_data"><code>incorrect_children_data</code><span class="hx:absolute hx:-mt-20" id="incorrect_children_data"></span>
+    <a href="#incorrect_children_data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>The children guest number doesn’t match the children guest number in the request of the [Retrieve hotelpage] call.</li>
+<li>The children age is incorrect.</li>
+</ul>
+<p>Try to change:</p>
+<ul>
+<li>The <code>rooms</code> field item number according to the <code>guests</code> field values in the request.</li>
+<li>The <code>age</code> field value.</li>
+</ul>
+<h3 data-hextra-search-id="incorrect_rooms_number"><code>incorrect_rooms_number</code><span class="hx:absolute hx:-mt-20" id="incorrect_rooms_number"></span>
+    <a href="#incorrect_rooms_number" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The room number doesn’t match the room number in the request of the [Retrieve hotelpage] call.</p>
+<p>Try to change the <code>rooms</code> field item number according to the <code>guests</code> field values in the request.</p>
+<h3 data-hextra-search-id="insufficient_b2b_balance"><code>insufficient_b2b_balance</code><span class="hx:absolute hx:-mt-20" id="insufficient_b2b_balance"></span>
+    <a href="#insufficient_b2b_balance" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In case the credit limit is not sufficient for the reservation.
+To discuss changes to this limit please contact your account manager.</p>
+<h3 data-hextra-search-id="order_not_found"><code>order_not_found</code><span class="hx:absolute hx:-mt-20" id="order_not_found"></span>
+    <a href="#order_not_found" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The order with the <code>partner_order_id</code> field value isn’t found.</p>
+<p>Send another booking creation request and change the <code>partner_order_id</code> field value.</p>
+<h3 data-hextra-search-id="rate_not_found"><code>rate_not_found</code><span class="hx:absolute hx:-mt-20" id="rate_not_found"></span>
+    <a href="#rate_not_found" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The rate isn’t found. Send another search request.</p>
+<h3 data-hextra-search-id="return_path_required"><code>return_path_required</code><span class="hx:absolute hx:-mt-20" id="return_path_required"></span>
+    <a href="#return_path_required" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The <code>return_path</code> field is required if the rate you are booking has the <code>payment_types</code> field with the <code>now</code> value.</p>
+<h3 data-hextra-search-id="unauthorized_group_booking"><code>unauthorized_group_booking</code><span class="hx:absolute hx:-mt-20" id="unauthorized_group_booking"></span>
+    <a href="#unauthorized_group_booking" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>An attempt to make a request with the conditions:</p>
+<ul>
+<li>More than 9 bookings in the same hotel.</li>
+<li>More than 9 bookings for the same dates.</li>
+<li>In one request.</li>
+</ul>
+<p>To make a group booking:</p>
+<ul>
+<li>Contact the API support team.</li>
+<li>Fill in the group booking form on the site.</li>
+</ul>
+<h3 data-hextra-search-id="invalid_upsell_attributes"><code>invalid_upsell_attributes</code><span class="hx:absolute hx:-mt-20" id="invalid_upsell_attributes"></span>
+    <a href="#invalid_upsell_attributes" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Invalid name and attributes combination in <code>upsell_data</code> field.</p>
+<h3 data-hextra-search-id="invalid_upsell_uid"><code>invalid_upsell_uid</code><span class="hx:absolute hx:-mt-20" id="invalid_upsell_uid"></span>
+    <a href="#invalid_upsell_uid" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Invalid upsell uid in <code>upsell_data</code> field.</p>
+<h3 data-hextra-search-id="invalid_upsell_data"><code>invalid_upsell_data</code><span class="hx:absolute hx:-mt-20" id="invalid_upsell_data"></span>
+    <a href="#invalid_upsell_data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Only early check-in and late check-out can be specified in the <code>upsell_data</code>, with a maximum of two values allowed.</p>
+<h3 data-hextra-search-id="arrival_date_differs_from_checkin_date"><code>arrival_date_differs_from_checkin_date</code><span class="hx:absolute hx:-mt-20" id="arrival_date_differs_from_checkin_date"></span>
+    <a href="#arrival_date_differs_from_checkin_date" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The check-in date should be equal to or the day after the check-in date in the request of the [Retrieve hotelpage] call.</p>
+<p>Try to change the <code>checkin_datetime</code> field value according to the <code>checkin</code> field value in the request.</p>
+<h3 data-hextra-search-id="not_enough_credit_card_data"><code>not_enough_credit_card_data</code><span class="hx:absolute hx:-mt-20" id="not_enough_credit_card_data"></span>
+    <a href="#not_enough_credit_card_data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The <code>init_uuid</code> and <code>pay_uuid</code> fields are required if the rate you are booking has the <code>is_need_credit_card_data</code> field with the <code>true</code> value.</p>
+<h3 data-hextra-search-id="incorrect_init_uuid_format"><code>incorrect_init_uuid_format</code><span class="hx:absolute hx:-mt-20" id="incorrect_init_uuid_format"></span>
+    <a href="#incorrect_init_uuid_format" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The <code>init_uuid</code> field values don’t match the regular expression.</p>
+<h3 data-hextra-search-id="incorrect_pay_uuid_format"><code>incorrect_pay_uuid_format</code><span class="hx:absolute hx:-mt-20" id="incorrect_pay_uuid_format"></span>
+    <a href="#incorrect_pay_uuid_format" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The <code>pay_uuid</code> field values don’t match the regular expression.</p>
+<h3 data-hextra-search-id="card_type_not_supported"><code>card_type_not_supported</code><span class="hx:absolute hx:-mt-20" id="card_type_not_supported"></span>
+    <a href="#card_type_not_supported" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The selected card type is not supported for this booking.<br>
+Try using a different card.</p>
+<h3 data-hextra-search-id="sandbox_restriction"><code>sandbox_restriction</code><span class="hx:absolute hx:-mt-20" id="sandbox_restriction"></span>
+    <a href="#sandbox_restriction" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>An attempt to book the test hotel with the <code>hid</code> = <code>8473727</code> in the [production environment].</p>
+<p>To book the test hotel, use the [test environment].</p>
+<h3 data-hextra-search-id="supplier_data_required"><code>supplier_data_required</code><span class="hx:absolute hx:-mt-20" id="supplier_data_required"></span>
+    <a href="#supplier_data_required" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The <code>supplier_data</code> field is required for your integration. Contact your account manager.</p>
+<h3 data-hextra-search-id="no_pricing_data"><code>no_pricing_data</code><span class="hx:absolute hx:-mt-20" id="no_pricing_data"></span>
+    <a href="#no_pricing_data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>The contract is not activated in the system.</li>
+<li>Network delay or connection error.</li>
+</ul>
+<p>Verify that the contract is active and retry the request. If the issue persists, contact your account manager.</p>
+<h3 data-hextra-search-id="timeout-unknown-and-5xx"><code>timeout</code>, <code>unknown</code>, and <code>5xx</code><span class="hx:absolute hx:-mt-20" id="timeout-unknown-and-5xx"></span>
+    <a href="#timeout-unknown-and-5xx" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>If you get the error, it doesn’t necessarily mean the booking isn’t created. These errors may occur because of the ETG services’ timeout. To check the booking creation, send the [Check booking process] request.</p>
+<h2 data-hextra-search-id="error-handling-diagram">Error Handling Diagram<span class="hx:absolute hx:-mt-20" id="error-handling-diagram"></span>
+    <a href="#error-handling-diagram" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Below is a sequence diagram describing how to handle errors during the start booking process:</p>
+<div role="img" aria-label="Diagram">
+  <pre class="mermaid hx:mt-6">
+    sequenceDiagram
+    participant User
+    participant API
+
+    User-&gt;&gt;API: Start booking process
+    alt status == &#34;ok&#34; or error is timeout/unknown or HTTP status code 5xx
+        API--&gt;&gt;User: Response: status == &#34;ok&#34; or error is timeout/unknown or HTTP status code 5xx
+        User-&gt;&gt;User: Proceed to Check Booking Process
+    else
+        API--&gt;&gt;User: Response: other error
+        User-&gt;&gt;User: Show error and stop
+    end
+  </pre>
+</div>
+          
+        </div>
+        <div class="hx:mt-16"></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+        href="/docs/b2b-api/booking/create-booking-process/"
+        title="Create booking process"
+        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
+      >Create booking process<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+        
+      </main>
+    </article>
+  </div>
+
+      <footer class="hextra-footer hx:bg-gray-100 hx:pb-[env(safe-area-inset-bottom)] hx:dark:bg-neutral-900 hx:print:bg-transparent"><div class="hextra-custom-footer hextra-max-footer-width hx:mx-auto hx:pl-[max(env(safe-area-inset-left),1.5rem)] hx:pr-[max(env(safe-area-inset-right),1.5rem)] hx:text-gray-600 hx:dark:text-gray-400"></div></footer>
+    
+    <dialog
+    id="hextra-search-dialog"
+    class="hextra-search-dialog"
+    aria-label="Search..."
+  >
+    <div class="hextra-search">
+      <div class="hextra-search-input-wrapper"><svg class="hextra-search-input-icon" focusable="false" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg><input
+          class="hextra-search-input"
+          type="search"
+          role="combobox"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          placeholder="Search..."
+          aria-label="Search..."
+          aria-controls="hextra-search-results"
+          aria-expanded="false"
+        /><button
+          type="button"
+          class="hextra-search-input-kbd"
+          data-search-close
+          aria-label="Close"
+        >ESC</button>
+      </div>
+      <div class="hextra-search-results-viewport" data-search-viewport>
+        <div class="hextra-search-results-inner hextra-scrollbar" data-search-inner>
+          <ul
+            id="hextra-search-results"
+            class="hextra-search-results"
+            role="listbox"
+            aria-label="Search results"
+          ></ul>
+          <div class="hextra-search-empty" data-search-empty hidden>No results found.</div>
+        </div>
+      </div>
+      <div class="hextra-search-status hx:sr-only" aria-live="polite" role="status"></div>
+    </div>
+  </dialog>
+    <script defer src="/js/main.js" integrity=""></script>
+<script defer src="/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script><script defer src="/en.search.js" integrity=""></script>
+    <script defer src="/en.search-dialog.js" integrity=""></script><script defer src="/js/mermaid.ffd1a76f0553952a344c68a9b1502dd5cfb6faab72541307b74679c5abc9cec8.js" integrity="sha256-/9GnbwVTlSo0TGipsVAt1c&#43;2&#43;qtyVBMHt0Z5xavJzsg=" crossorigin="anonymous"></script><script>
+  document.addEventListener("DOMContentLoaded", () => {
+    
+    document.querySelectorAll(".mermaid").forEach((el) => {
+      el.dataset.original = el.innerHTML;
+    });
+
+    
+    mermaid.initialize({ startOnLoad: false });
+
+    
+    let queue = Promise.resolve();
+    const renderVisible = () => {
+      queue = queue.then(() => {
+        const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+        mermaid.initialize({ startOnLoad: false, theme: theme });
+        const nodes = Array.from(document.querySelectorAll(".mermaid:not([data-processed])")).filter((el) => el.offsetParent !== null);
+        if (nodes.length) return mermaid.run({ nodes }).catch(console.error);
+      });
+    };
+
+    renderVisible();
+
+    
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting && !e.target.dataset.processed)) {
+        renderVisible();
+      }
+    });
+    document.querySelectorAll(".mermaid").forEach((el) => observer.observe(el));
+
+    
+    let timeout;
+    new MutationObserver(() => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        document.querySelectorAll(".mermaid[data-processed]").forEach((el) => {
+          el.innerHTML = el.dataset.original;
+          el.removeAttribute("data-processed");
+        });
+        renderVisible();
+      }, 150);
+    }).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  });
+</script>
+
+  </body>
+</html>

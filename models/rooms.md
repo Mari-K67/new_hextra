@@ -1,0 +1,1 @@
+The guests’ information for the rooms.

@@ -1,0 +1,229 @@
+/* details shortcode: parameter header (title, type, required, anchor) */
+.param-summary {
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+}
+.param-title {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.param-type,
+.param-required {
+  border-radius: 0.25rem;
+  padding: 0 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  background: #e5e7eb;
+  color: #374151;
+}
+.param-required--yes {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+.dark .param-type,
+.dark .param-required {
+  background: #374151;
+  color: #e5e7eb;
+}
+.dark .param-required--yes {
+  background: #7f1d1d;
+  color: #fecaca;
+}
+.param-anchor {
+  margin-left: 0.25rem;
+  color: #9ca3af;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.param-summary:hover .param-anchor,
+.param-anchor:focus {
+  opacity: 1;
+}
+.param-details {
+  scroll-margin-top: 5rem;
+}
+
+.expandable-title {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.expandable-title span {
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* Отображение методов API */
+.api-line {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f3f4f6;
+  box-shadow: 0 0 0 1px #e5e7eb inset;
+  margin: 1.5em 0;
+  /* Шрифт для всего контейнера (наследование) */
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace);
+}
+
+.hextra-tabs-panel .api-line {
+  margin-top: 0;
+}
+
+html.dark .api-line {
+  background: #1f2937;
+  box-shadow: 0 0 0 1px #374151 inset;
+}
+
+.api-line-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 75px;
+  margin: 10px 0 10px 10px;
+  padding: 0.35rem 0.75rem;
+  border-radius: 14px;
+  font-weight: 800;
+  color: #111827;
+  flex: 0 0 auto;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  /* Наследуем шрифт, чтобы бейдж тоже был моноширинным */
+  font-family: inherit;
+}
+
+html.dark .api-line-badge {
+  color: #ffffff;
+}
+
+.api-line-get .api-line-badge    { background: #07af52; }
+.api-line-post .api-line-badge   { background: #f59e0b; }
+.api-line-put .api-line-badge    { background: #6366f1; }
+.api-line-patch .api-line-badge  { background: #8b5cf6; }
+.api-line-delete .api-line-badge { background: #ef4444; }
+
+html.dark .api-line-get .api-line-badge  { background: #247e4c; }
+html.dark .api-line-post .api-line-badge { background: #d88900; }
+
+.api-line-code {
+  margin: 0;
+  /* Большой отступ справа резервирует место под кнопку, чтобы блок не прыгал */
+  padding: 0.95rem 3.4rem 0.95rem 0.9rem;
+  background: transparent;
+  flex: 1 1 auto;
+  overflow-x: auto;
+  font-size: 0.8rem;
+}
+
+html.dark .api-line-code {
+  background: #1f2937;
+}
+
+.api-line-code code {
+  background: transparent;
+  padding: 0;
+  font-size: 0.85rem;
+  color: #111827;
+  white-space: pre;
+  /* Гарантируем моноширинный шрифт для кода */
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+html.dark .api-line-code code {
+  color: #e5e7eb;
+}
+.api-line-code::-webkit-scrollbar {
+  height: 8px;
+}
+.api-line-code::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+/* Стили для кнопки копирования в методлайне */
+.methodline-copy-btn {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 12px;
+  background: #f3f4f6;
+  color: #6b7280;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+  padding: 0;
+}
+
+html.dark .methodline-copy-btn {
+  background: #1f2937;
+  color: #6b7280;
+}
+
+.api-line:hover .methodline-copy-btn {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) scale(1);
+}
+
+.methodline-copy-btn:hover {
+  background: #e5e7eb;
+}
+
+html.dark .methodline-copy-btn:hover {
+  background: #374151;
+  color: #9ca3af;
+}
+
+.methodline-copy-btn.copied {
+  background: #c7d2fe;
+  color: #3730a3;
+}
+
+html.dark .methodline-copy-btn.copied {
+  background: #3f3a7d;
+  color: #a5b4fc;
+}
+
+.methodline-copy-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.methodline-copy-btn .copy-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.methodline-copy-btn .success-icon {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.methodline-copy-btn.copied .copy-icon {
+  display: none;
+}
+
+.methodline-copy-btn.copied .success-icon {
+  display: flex;
+}

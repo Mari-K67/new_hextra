@@ -1,0 +1,1 @@
+Whether the endpoint has a limit for the request in seconds or not.

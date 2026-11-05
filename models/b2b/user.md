@@ -1,0 +1,1 @@
+The partner manager additional information.

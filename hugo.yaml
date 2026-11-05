@@ -1,0 +1,94 @@
+baseURL: http://localhost:1313/
+languageCode: en-us
+title: My Documentation
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
+  mounts:
+    - source: 'images'
+      target: 'static/images'
+
+security:
+  enableInlineShortcodes: true
+
+enableRobotsTXT: true
+
+outputFormats:
+  LLMs:
+    mediaType: text/plain
+    baseName: llms
+    isPlainText: true
+    notAlternative: true
+  LLMsFull:
+    mediaType: text/plain
+    baseName: llms-full
+    isPlainText: true
+    notAlternative: true
+  Markdown:
+    mediaType: text/markdown
+    baseName: index
+    isPlainText: true
+
+outputs:
+  home:     [HTML, RSS, LLMs, LLMsFull, Markdown]
+  page:     [HTML, Markdown]
+  section:  [HTML, Markdown]
+  taxonomy: [HTML, Markdown]
+  term:     [HTML, Markdown]
+
+markup:
+  # allow raw html
+  goldmark:
+    renderer:
+      unsafe: true
+git:
+  # enable hextra syntax highlight
+  highlight:
+    noClasses: false
+
+menu:
+  main:
+    - name: Search
+      weight: 1
+      params:
+        type: search
+
+taxonomies:
+  tag: 'tags'
+
+params:
+  analytics:
+    enabled: false
+    environment: production
+  description: Official documentation for the Emerging Travel Group (ETG / Worldota) partner API — hotel search, booking, and post-booking management across the B2B, Affiliate, Content, and Midoffice APIs.
+  keywords:
+    - ETG API
+    - Worldota
+    - Emerging Travel Group
+    - hotel API
+    - hotel booking API
+    - B2B API
+    - Affiliate API
+    - Content API
+    - Midoffice API
+    - travel API
+  navbar:
+    displayTitle: true
+    displayLogo: false
+  docs:
+    single:
+      displayTags: true
+    list:
+      displayTags: true
+
+  footer:
+    displayCopyright: false
+    displayPoweredBy: false
+
+  search:
+    enable: true
+    type: flexsearch
+    flexsearch:
+      index: content
+      tokenize: forward

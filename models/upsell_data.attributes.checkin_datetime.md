@@ -1,0 +1,1 @@
+The upsell check-in date and time (RFC 3339 format with a time zone, for example, `2027-06-14T10:00:00Z`). Values without a time zone or in the 12-hour format are rejected with the `invalid_json_format` error.

@@ -1,0 +1,1 @@
+The estimated arrival time to the hotel (12-hour format with `*_day_period`; otherwise 24-hour format).

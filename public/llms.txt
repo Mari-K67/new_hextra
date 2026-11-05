@@ -1,0 +1,17 @@
+# My Documentation
+
+> Official documentation for the Emerging Travel Group (ETG / Worldota) partner API — hotel search, booking, and post-booking management across the B2B, Affiliate, Content, and Midoffice APIs.
+
+
+## Documentation
+
+### B2B API
+
+#### Booking
+- [Start booking process](http://localhost:1313/docs/b2b-api/booking/start-booking-process/): Production Sandbox https://api.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/ … - Published 2025-03-24
+- [Create booking process](http://localhost:1313/docs/b2b-api/booking/create-booking-process/):  - Published 2025-03-24
+
+
+---
+Generated on 2026-11-05 10:47:47 UTC
+Site: http://localhost:1313/

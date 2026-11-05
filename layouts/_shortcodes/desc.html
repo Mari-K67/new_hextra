@@ -1,0 +1,13 @@
+{{- /*
+Renders a markdown fragment (with nested shortcodes) from a file relative to the project root.
+
+@param {string} 0 Path to the fragment, e.g. "models/language.md".
+
+@example {{% desc "models/language.md" %}}
+*/ -}}
+
+{{- $file := .Get 0 -}}
+{{- if not (fileExists $file) -}}
+  {{- errorf "desc: file %q not found (%s)" $file .Position -}}
+{{- end -}}
+{{- $file | readFile | $.Page.RenderString (dict "display" "block") -}}

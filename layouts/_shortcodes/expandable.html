@@ -1,0 +1,15 @@
+{{- /*
+Wrapper for a group of details blocks with "Expand this | Collapse this" controls
+(handled by js/expand.js).
+
+@example {{% expandable %}}{{< details title="id" >}}...{{< /details >}}{{% /expandable %}}
+*/ -}}
+<div class="expandable">
+  <div class="expandable-title">
+    <span class="expandable-expand">Expand this</span>|
+    <span class="expandable-collapse">Collapse this</span>
+  </div>
+  <div class="expandable-content">
+    {{ .InnerDeindent | $.Page.RenderString (dict "display" "block") }}
+  </div>
+</div>
