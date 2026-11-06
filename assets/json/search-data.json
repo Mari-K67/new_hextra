@@ -23,7 +23,18 @@
       {{- $data = $data | merge (dict (printf "%s#%s" $anchor $param.label) $param.text) -}}
     {{- end -}}
   {{- end -}}
-  {{- $output = $output | merge (dict $pageLink (dict "title" $pageTitle "data" $data)) -}}
+  {{- /* Keep example blocks (headings listed here, with the code under them) out of the search index. */ -}}
+  {{- $filtered := dict -}}
+  {{- range $key, $text := $data -}}
+    {{- $skip := false -}}
+    {{- range slice "Request example" "Response example" -}}
+      {{- if strings.HasSuffix $key (printf "#%s" .) -}}{{- $skip = true -}}{{- end -}}
+    {{- end -}}
+    {{- if not $skip -}}
+      {{- $filtered = $filtered | merge (dict $key $text) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $output = $output | merge (dict $pageLink (dict "title" $pageTitle "data" $filtered)) -}}
 {{- end -}}
 
 {{/* Extract glossary data entries */}}

@@ -8,10 +8,10 @@
 ### B2B API
 
 #### Booking
-- [Start booking process](http://localhost:1313/docs/b2b-api/booking/start-booking-process/): Production Sandbox https://api.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/ … - Published 2025-03-24
-- [Create booking process](http://localhost:1313/docs/b2b-api/booking/create-booking-process/):  - Published 2025-03-24
+- [Start booking process](http://localhost:1313/new_hextra/docs/b2b-api/booking/start-booking-process/): Production Sandbox https://api.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/ … - Published 2025-03-24
+- [Create booking process](http://localhost:1313/new_hextra/docs/b2b-api/booking/create-booking-process/):  - Published 2025-03-24
 
 
 ---
-Generated on 2026-11-05 10:47:47 UTC
-Site: http://localhost:1313/
+Generated on 2026-11-06 09:16:46 UTC
+Site: http://localhost:1313/new_hextra/

@@ -33,7 +33,12 @@ Collapsible parameter block (overrides the Hextra built-in).
     {{- with $required }}<span class="param-required{{ if eq . "required" }} param-required--yes{{ end }}">{{ . }}</span>{{ end -}}
     {{- with $anchor }}<a href="#{{ . }}" class="param-anchor" aria-label="Permalink to {{ $title }}">#</a>{{ end -}}
   </summary>
+  {{- /* Wrap the nested blocks into a group, so the CSS can outline the whole structure. */ -}}
+  {{- $parts := split (string $inner) "<details" -}}
   <div class="hx:p-2 hx:overflow-hidden">
-    {{ $inner }}
+    {{ index $parts 0 | safeHTML }}
+    {{- if gt (len $parts) 1 -}}
+    <div class="param-children">{{ print "<details" (delimit (after 1 $parts) "<details") | safeHTML }}</div>
+    {{- end }}
   </div>
 </details>

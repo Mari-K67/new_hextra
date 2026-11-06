@@ -45,6 +45,29 @@
   scroll-margin-top: 5rem;
 }
 
+/* group of nested parameters: a closed rounded frame around the whole group */
+.param-children {
+  --param-line: #d1d5db;
+  margin-top: 0.5rem;
+  padding: 0.17rem 1rem;
+  border: 1px solid var(--param-line);
+  border-radius: 0.5rem;
+}
+/* tighter vertical spacing between the parameters inside the group */
+.param-children > .param-details {
+  margin-top: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.param-children > .param-details > div {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+html.dark .param-children,
+.dark .param-children {
+  --param-line: #525252;
+}
+
 .expandable-title {
     margin-top: 5px;
     margin-bottom: 5px;
