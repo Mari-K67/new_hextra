@@ -1,0 +1,11 @@
+{{- /*
+Two-column row: the description on the left, the example on the right.
+Stacks into one column on narrow screens.
+
+@example
+{{< api-row >}}
+{{% api-col %}}...{{% /api-col %}}
+{{% api-col side="true" %}}...{{% /api-col %}}
+{{< /api-row >}}
+*/ -}}
+<div class="api-row">{{ .Inner }}</div>

@@ -250,3 +250,26 @@ html.dark .methodline-copy-btn.copied {
 .methodline-copy-btn.copied .success-icon {
   display: flex;
 }
+
+/* api-row shortcode: description on the left, example on the right */
+.api-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .api-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  /* the heading stays in place; only the example (api-sticky) follows the scroll */
+  .api-sticky {
+    position: sticky;
+    top: calc(var(--hextra-navbar-height) + 1rem);
+    max-height: calc(100vh - var(--hextra-navbar-height) - 2rem);
+    overflow-y: auto;
+  }
+}
+.api-col > :first-child {
+  margin-top: 0;
+}

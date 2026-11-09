@@ -4,6 +4,7 @@ date = 2025-03-24T00:00:00Z
 draft = false
 weight = 1
 tags = ['b2b']
+toc = false
 aliases = ['/docs/b2b-api/booking/b2b-v3-hotel-order-booking-finish/', '/docs/b2b-api/booking/start-booking-process/']
 +++
 
@@ -41,122 +42,8 @@ If invalid user data is used, the data may be added to the stop list.
 * For all objects with the `currency_code` field the value is always `EUR`.
 * The following errors are not supported: `book_hash_not_found`, `rate_not_found`, `return_path_required`, `not_enough_credit_card_data`, `incorrect_init_uuid_format`, and `incorrect_pay_uuid_format`.
 
-## Request example
-
-{{< tabs items="Production, Sandbox" >}}
-{{< tab >}}
-```shell
-curl --user '<KEY_ID>:<API_KEY>' 'https://api.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/' \
---header 'Content-Type: application/json' \
---data '{
-  "language": "en",
-  "arrival_datetime": "2027-06-14T14:30:00",
-  "partner": {
-    "partner_order_id": "9f1c2b7e-4a3d-4c8e-b1f2-6d7a8e9c0b13",
-    "comment": "Corporate client, invoice to HQ.",
-    "amount_sell_b2b2c": "520.00"
-  },
-  "payment_type": {
-    "type": "deposit",,
-    "amount": "412.50",
-    "currency_code": "EUR"
-  },
-  "return_path": "https://example.com/booking/return?order=9f1c2b7e",
-  "rooms": [
-    {
-      "guests": [
-        {
-          "first_name": "Martin",
-          "last_name": "Smith",
-          "gender": "male"
-        },
-        {
-          "first_name": "Emma",
-          "last_name": "Smith",
-          "gender": "female"
-        },
-        {
-          "first_name": "Eliot",
-          "last_name": "Smith",
-          "is_child": true,
-          "age": 11,
-          "gender": "male"
-        }
-      ]
-    }
-  ],
-  "upsell_data": [],
-  "user": {
-    "email": "john.smith@example.com",
-    "phone": "12124567899",
-    "comment": "Non-smoking room, high floor if possible."
-  },
-  "supplier_data": {
-    "first_name_original": "Peter",
-    "last_name_original": "Collins",
-    "email": "peter.collins@example.com",
-    "phone": "12124567880"
-  }
-}'
-```
-{{< /tab >}}
-{{< tab >}}
-```shell
-curl --user '<KEY_ID>:<API_KEY>' 'https://api-sandbox.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/' \
---header 'Content-Type: application/json' \
---data '{
-  "language": "en",
-  "arrival_datetime": "2027-06-14T14:30:00",
-  "partner": {
-    "partner_order_id": "9f1c2b7e-4a3d-4c8e-b1f2-6d7a8e9c0b13",
-    "comment": "Corporate client, invoice to HQ.",
-    "amount_sell_b2b2c": "520.00"
-  },
-  "payment_type": {
-    "type": "deposit",,
-    "amount": "412.50",
-    "currency_code": "EUR"
-  },
-  "return_path": "https://example.com/booking/return?order=9f1c2b7e",
-  "rooms": [
-    {
-      "guests": [
-        {
-          "first_name": "Martin",
-          "last_name": "Smith",
-          "gender": "male"
-        },
-        {
-          "first_name": "Emma",
-          "last_name": "Smith",
-          "gender": "female"
-        },
-        {
-          "first_name": "Eliot",
-          "last_name": "Smith",
-          "is_child": true,
-          "age": 11,
-          "gender": "male"
-        }
-      ]
-    }
-  ],
-  "upsell_data": [],
-  "user": {
-    "email": "john.smith@example.com",
-    "phone": "12124567899",
-    "comment": "Non-smoking room, high floor if possible."
-  },
-  "supplier_data": {
-    "first_name_original": "Peter",
-    "last_name_original": "Collins",
-    "email": "peter.collins@example.com",
-    "phone": "12124567880"
-  }
-}'
-```
-{{< /tab >}}
-{{< /tabs >}}
+{{< api-row >}}
+{{% api-col %}}
 
 ## Request body
 
@@ -313,6 +200,136 @@ curl --user '<KEY_ID>:<API_KEY>' 'https://api-sandbox.ratehawk.com/api/b2b/v3/ho
 {{</details >}}
 {{</details >}}
 
+{{% /api-col %}}
+{{% api-col side="true" %}}
+
+## Request example
+
+{{% api-sticky %}}
+
+{{< tabs items="Production, Sandbox" >}}
+{{< tab >}}
+```shell
+curl --user '<KEY_ID>:<API_KEY>' 'https://api.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/' \
+--header 'Content-Type: application/json' \
+--data '{
+  "language": "en",
+  "arrival_datetime": "2027-06-14T14:30:00",
+  "partner": {
+    "partner_order_id": "9f1c2b7e-4a3d-4c8e-b1f2-6d7a8e9c0b13",
+    "comment": "Corporate client, invoice to HQ.",
+    "amount_sell_b2b2c": "520.00"
+  },
+  "payment_type": {
+    "type": "deposit",,
+    "amount": "412.50",
+    "currency_code": "EUR"
+  },
+  "return_path": "https://example.com/booking/return?order=9f1c2b7e",
+  "rooms": [
+    {
+      "guests": [
+        {
+          "first_name": "Martin",
+          "last_name": "Smith",
+          "gender": "male"
+        },
+        {
+          "first_name": "Emma",
+          "last_name": "Smith",
+          "gender": "female"
+        },
+        {
+          "first_name": "Eliot",
+          "last_name": "Smith",
+          "is_child": true,
+          "age": 11,
+          "gender": "male"
+        }
+      ]
+    }
+  ],
+  "upsell_data": [],
+  "user": {
+    "email": "john.smith@example.com",
+    "phone": "12124567899",
+    "comment": "Non-smoking room, high floor if possible."
+  },
+  "supplier_data": {
+    "first_name_original": "Peter",
+    "last_name_original": "Collins",
+    "email": "peter.collins@example.com",
+    "phone": "12124567880"
+  }
+}'
+```
+{{< /tab >}}
+{{< tab >}}
+```shell
+curl --user '<KEY_ID>:<API_KEY>' 'https://api-sandbox.ratehawk.com/api/b2b/v3/hotel/order/booking/finish/' \
+--header 'Content-Type: application/json' \
+--data '{
+  "language": "en",
+  "arrival_datetime": "2027-06-14T14:30:00",
+  "partner": {
+    "partner_order_id": "9f1c2b7e-4a3d-4c8e-b1f2-6d7a8e9c0b13",
+    "comment": "Corporate client, invoice to HQ.",
+    "amount_sell_b2b2c": "520.00"
+  },
+  "payment_type": {
+    "type": "deposit",,
+    "amount": "412.50",
+    "currency_code": "EUR"
+  },
+  "return_path": "https://example.com/booking/return?order=9f1c2b7e",
+  "rooms": [
+    {
+      "guests": [
+        {
+          "first_name": "Martin",
+          "last_name": "Smith",
+          "gender": "male"
+        },
+        {
+          "first_name": "Emma",
+          "last_name": "Smith",
+          "gender": "female"
+        },
+        {
+          "first_name": "Eliot",
+          "last_name": "Smith",
+          "is_child": true,
+          "age": 11,
+          "gender": "male"
+        }
+      ]
+    }
+  ],
+  "upsell_data": [],
+  "user": {
+    "email": "john.smith@example.com",
+    "phone": "12124567899",
+    "comment": "Non-smoking room, high floor if possible."
+  },
+  "supplier_data": {
+    "first_name_original": "Peter",
+    "last_name_original": "Collins",
+    "email": "peter.collins@example.com",
+    "phone": "12124567880"
+  }
+}'
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+{{% /api-sticky %}}
+
+{{% /api-col %}}
+{{< /api-row >}}
+
+{{< api-row >}}
+{{% api-col %}}
+
 ## Response
 
 {{< details title="data" type="Object" expanded="true" >}}
@@ -331,7 +348,12 @@ Returns null.
 {{% desc "models/error.md" %}}
 {{</details >}}
 
+{{% /api-col %}}
+{{% api-col side="true" %}}
+
 ## Response example
+
+{{% api-sticky %}}
 
 ```json
 {
@@ -409,6 +431,11 @@ Returns null.
   "error": null
 }
 ```
+
+{{% /api-sticky %}}
+
+{{% /api-col %}}
+{{< /api-row >}}
 
 ## Errors
 

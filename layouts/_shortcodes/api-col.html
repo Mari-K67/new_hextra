@@ -1,0 +1,10 @@
+{{- /*
+Column of the api-row shortcode.
+
+@param {string} side Set to "true" for the example column: it stays in view while scrolling the description.
+*/ -}}
+<div class="api-col{{ if eq (.Get "side") "true" }} api-col--side{{ end }}">
+
+{{ .Inner }}
+
+</div>
