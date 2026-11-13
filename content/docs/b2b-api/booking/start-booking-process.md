@@ -205,8 +205,6 @@ If invalid user data is used, the data may be added to the stop list.
 
 ## Request example
 
-{{% api-sticky %}}
-
 {{< tabs items="Production, Sandbox" >}}
 {{< tab >}}
 ```shell
@@ -322,8 +320,6 @@ curl --user '<KEY_ID>:<API_KEY>' 'https://api-sandbox.ratehawk.com/api/b2b/v3/ho
 {{< /tab >}}
 {{< /tabs >}}
 
-{{% /api-sticky %}}
-
 {{% /api-col %}}
 {{< /api-row >}}
 
@@ -352,8 +348,6 @@ Returns null.
 {{% api-col side="true" %}}
 
 ## Response example
-
-{{% api-sticky %}}
 
 ```json
 {
@@ -431,8 +425,6 @@ Returns null.
   "error": null
 }
 ```
-
-{{% /api-sticky %}}
 
 {{% /api-col %}}
 {{< /api-row >}}

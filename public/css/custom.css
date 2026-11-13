@@ -261,14 +261,62 @@ html.dark .methodline-copy-btn.copied {
 @media (min-width: 1024px) {
   .api-row {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
   }
-  /* the heading stays in place; only the example (api-sticky) follows the scroll */
-  .api-sticky {
-    position: sticky;
-    top: calc(var(--hextra-navbar-height) + 1rem);
-    max-height: calc(100vh - var(--hextra-navbar-height) - 2rem);
-    overflow-y: auto;
+}
+/* example column: heading, then the Production/Sandbox tabs, then the code block */
+.api-col--side > .hextra-code-block,
+.api-col--side .hextra-tabs-panel {
+  padding-top: 0;
+}
+.api-col--side .hextra-tabs-panel {
+  margin-top: 1rem;
+}
+/* code block right under the heading: same top offset (1rem) as the first parameter frame on the left */
+.api-col--side > .hextra-code-block {
+  margin-top: 1rem;
+}
+/* the code scrolls vertically inside the block and wraps long lines instead of scrolling sideways */
+.api-col--side pre {
+  max-height: calc(100vh - var(--hextra-navbar-height) - 14rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+/* scrollbar half as wide as Hextra's default (12px -> 6px); the standard scrollbar-* properties
+   are reset because Chrome ignores ::-webkit-scrollbar while they are set */
+.api-col--side pre,
+.api-col--side pre * {
+  scrollbar-width: auto;
+  scrollbar-color: auto;
+  scrollbar-gutter: auto;
+}
+.api-col--side pre::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.api-col--side pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+.api-col--side pre::-webkit-scrollbar-thumb {
+  border: 0;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.api-col--side pre:hover::-webkit-scrollbar-thumb {
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+@supports not selector(::-webkit-scrollbar) {
+  .api-col--side pre {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
   }
+}
+.api-col--side pre code {
+  white-space: inherit;
+  overflow-wrap: inherit;
 }
 .api-col > :first-child {
   margin-top: 0;
